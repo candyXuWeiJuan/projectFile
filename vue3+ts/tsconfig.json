@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"strict": true,
+		"jsx": "preserve",
+		"importHelpers": true,
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": false,
+		"sourceMap": true,
+		// 忽略 this 的类型检查.
+		"noImplicitThis": false,
+		"baseUrl": ".",
+		"types": ["webpack-env", "vite/client"],
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"tests/**/*.ts",
+		"tests/**/*.tsx"
+	],
+	"exclude": ["node_modules"]
+}

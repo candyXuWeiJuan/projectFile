@@ -1,0 +1,53 @@
+{
+  "name": "vite-vue3-ts",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "axios": "^0.21.1",
+    "echarts": "^5.1.2",
+    "element-plus": "^1.0.2-beta.70",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.6",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@types/node": "^15.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-typescript": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.23.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^8.0.2",
+    "typescript": "^4.1.3",
+    "vite": "^2.2.3",
+    "vue-tsc": "^0.0.24"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,html,css,vue,less,scss}": "prettier  --plugin-search-dir ./node_modules --write"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "_standardInited": true
+}

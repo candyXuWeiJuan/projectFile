@@ -1,0 +1,147 @@
+html,
+body {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	color: 12px;
+	background: white;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+ul,
+li,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+// dialog样式重置
+.el-dialog__body {
+	padding: 0px 15px;
+}
+.el-dialog__footer {
+	padding: 0 10px 15px 0;
+}
+// form表单样式重置
+.form-class {
+	.el-form-item__content {
+		div:first-child {
+			width: 100%;
+		}
+	}
+}
+.el-form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+// 表格样式重置
+.el-table thead {
+	color: #555;
+	font-size: 14px;
+	th {
+		background: #f7f8fa;
+	}
+}
+.el-table .cell {
+	text-align: center;
+}
+.el-table__body-wrapper {
+	height: calc(100% - 40px);
+	overflow-y: auto;
+}
+//tab样式重置
+.el-tab-pane {
+	height: 100%;
+}
+// 滚动条样式
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #c7c7c7;
+	-webkit-border-radius: 100px;
+}
+*::-webkit-scrollbar-track-piece {
+	background-color: #fff;
+	-webkit-border-radius: 10px;
+}
+//提醒框
+.el-message {
+	min-width: auto !important;
+}
+// 主页面外边距样式等公共部分,主要是padding统一
+.main {
+	width: 100%;
+	height: 100vh;
+	padding: 10px 14px;
+	color: #414141;
+}
+.m-page-header {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	min-height: 20px;
+	.header-back {
+		font-size: 19px;
+		color: #199ed8;
+		padding-right: 10px;
+		cursor: pointer;
+		font-weight: 700;
+	}
+	.m-page-header__inner {
+		position: relative;
+		padding-left: 16px;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: #199ed8;
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			transform: translateY(-5px);
+		}
+		&.hideBlock{
+			padding-left: 0;
+			&::before{
+				display: none;
+			}
+		}
+	}
+}
+// 组件中高度统一调整
+.el-select-dropdown__item {
+	height: 28px;
+	line-height: 28px;
+}
+.el-table--small td {
+	padding: 5px 0;
+}
+.el-table--small th {
+	padding: 6px 0;
+}
+//表格中的操作button样式
+.table-btn {
+	min-height: 18px;
+	line-height: 17px;
+	padding: 2px 6px;
+}
+//textarea
+.el-textarea__inner {
+	font-size: 14px;
+	color: #606266;
+	font: 400 13.3333px Arial;
+	line-height: 27px;
+}
+.f-color--red {
+	color: red;
+}
